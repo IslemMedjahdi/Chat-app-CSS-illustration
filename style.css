@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik' , sans-serif;
+}
+.colors{
+    color : hsl(276, 100%, 81%);
+    color: hsl(276, 55%, 52%);
+    color: hsl(271, 15%, 43%);
+    color: hsl(206, 6%, 79%);
+    color: hsl(271, 36%, 24%);
+    color: hsl(270, 7%, 64%);
+    color: hsl(293, 100%, 63%);
+    color: hsl(264, 100%, 61%);
+    color: hsl(271, 36%, 24%);
+    color: hsl(289, 100%, 72%);
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+.chat-app{
+    background: #fff;
+    width: 18rem;
+    height: 34rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    z-index: 1;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    animation-name: left2right;
+    animation-duration: 1s;
+}
+.shape{
+    position: absolute;
+    width: 26rem;
+    height: 85vh;
+    background:  linear-gradient(to bottom,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 0 0 20rem 20rem;
+    top: 0;
+    left: 0;
+    transform: translateX(-6rem);
+    z-index: 0;
+}
+.chat-container{
+    background: hsl(270, 20%, 96%);
+    width: 17rem;
+    height: 33rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.shape-1{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 25%;
+    height: 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    background: #fff;
+}
+.top-chat{
+    position: absolute;
+    width: 100%;
+    height: 4.5rem;
+    background: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1rem;
+}
+.top-chat img{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 0.9rem ;
+    pointer-events: none;
+    user-select: none;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top-chat .user strong{
+    color: white;
+    font-size: 0.8em;
+}
+.top-chat .user p{
+    color: white;
+    opacity: 0.7;
+    font-size: 0.7em;
+}
+.top-chat i{
+    margin-left: 0.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.fa-ellipsis-v{
+    margin-left: 5rem !important;
+}
+.text h1{
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 1rem;
+}
+.text{
+    margin-left: 6rem;
+    animation-name: right2left;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    transform: translateX(50rem);
+    animation-fill-mode: forwards;
+}
+.text p{
+    color: hsl(270, 7%, 64%);
+    line-height: 1.7rem;
+    max-width: 30rem;
+}
+.chat{
+    margin-top: 5rem;
+}
+.chat .recieve{
+    width: 70%;
+    height: fit-content;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background: hsla(206, 7%, 79%, 0.61);
+    color: hsl(276, 55%, 52%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.chat .send-img{
+    margin: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.chat .send-img img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    margin-left: 0.3rem;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.chat .send{
+    width: 70%;
+    height: fit-content;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background: #fff;
+    color: hsl(271, 36%, 24%);
+    transform: translateX(3.5rem);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.radio{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background: linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 1rem 1rem 1rem 0.5rem;
+    padding: 0.7rem 0.5rem;
+    color: white;
+    margin: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.radio label{
+    margin: 0 1rem;
+    font-size: 0.7rem;
+}
+.radio p{
+    font-weight: 500;
+    margin-left: auto;
+}
+input[type='radio']:after {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: hsl(293, 100%, 63%);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    cursor: pointer;
+}
+input[type='radio']:checked:after {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 0.1rem 0;
+}
+.message input{
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+}
+.message div{
+    height: 1.9rem;
+    width: 1.9rem;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.message i{
+    font-size: 1.2em;
+    color: #fff;
+}
+::selection{
+    background-color: hsl(293, 100%, 63%);
+    color: hsl(271, 36%, 24%);
+}
+/* ------ Animations --------- */
+@keyframes left2right {
+    0%{
+        transform: translateX(-50rem);
+    }
+    100%{
+        transform: initial;
+    }
+}
+@keyframes right2left{
+    0%{
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+}
+/* ------- Media Queries ------- */
+@media only screen and (max-width: 950px){
+    .container{
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+    .chat-app{
+        margin: 3rem auto;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 2rem 5rem 2rem;
+    }
+    .shape{
+        height: 75vh;
+    }
+}
